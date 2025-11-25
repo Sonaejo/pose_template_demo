@@ -56282,7 +56282,7 @@ s.toString
 B.eH.qE(s,"pose",q)}q=this.ay
 if(q!=null){s=window
 s.toString
-B.eH.qE(s,"pose:error",q)}try{window.poseStop()}catch(r){}this.aK()},
+B.eH.qE(s,"error",q)}try{window.poseStop()}catch(r){}this.aK()},
 PN(){var s,r,q,p=this,o=null,n=new A.a2B(p)
 p.ax=n
 r=window
@@ -56292,7 +56292,7 @@ n=new A.a2C(p)
 p.ay=n
 r=window
 r.toString
-B.eH.Du(r,"pose:error",n)
+B.eH.Du(r,"error",n)
 try{window.poseStart()}catch(q){s=A.aB(q)
 n=p.c
 if(n==null)return
@@ -56318,13 +56318,13 @@ s.ZK()
 r=Date.now()
 if(r-q.r>=250){q.r=r
 q.f=B.c.T(s.gu(0),1)+" FPS"}q.aE(new A.a2D(q,a))},
-P(a){var s,r,q,p,o=this,n=null,m=o.ch?"Web (Front)":"Web (Back)",l=A.a79(0,B.G5),k=o.d
-k=A.a79(0,A.A6(A.a9H(n,n,new A.IW(k,!0)),!0))
+P(a){var s,r,q,p,o=this,n=null,m=o.ch,l=m?"Web (Front)":"Web (Back)",k=A.a79(0,B.G5)
+m=A.a79(0,A.A6(A.a9H(n,n,new A.IW(o.d,m)),!0))
 s=o.rP("FPS",o.f)
-r=o.rP("Camera",m)
+r=o.rP("Camera",l)
 q=o.d
 p=t.k
-return new A.tG(new A.pl(B.KY,B.l,new A.HG(n,n,1/0,56),n),A.Wz(!1,A.Yw(B.d8,A.d([l,k,A.Bm(n,A.ahU(A.d([s,B.uc,r,B.uc,o.rP("Landmarks",B.h.k(new A.aS(q,o.gQ2(),A.a2(q).h("aS<1>")).gp(0)))],p),B.b8,B.bj),n,n,12,n,12,n),A.Bm(n,new A.zJ(B.yM,B.xb,"cameraSwitchFab",o.gSz(),n),n,n,n,12,12,n),A.Bm(24,B.wG,n,n,0,0,n,n)],p),B.hV),!1),B.Q,n)},
+return new A.tG(new A.pl(B.KY,B.l,new A.HG(n,n,1/0,56),n),A.Wz(!1,A.Yw(B.d8,A.d([k,m,A.Bm(n,A.ahU(A.d([s,B.uc,r,B.uc,o.rP("Landmarks",B.h.k(new A.aS(q,o.gQ2(),A.a2(q).h("aS<1>")).gp(0)))],p),B.b8,B.bj),n,n,12,n,12,n),A.Bm(n,new A.zJ(B.yM,B.xb,"cameraSwitchFab",o.gSz(),n),n,n,n,12,12,n),A.Bm(24,B.wG,n,n,0,0,n,n)],p),B.hV),!1),B.Q,n)},
 Q3(a){return!isNaN(a.a)&&!isNaN(a.b)},
 rP(a,b){var s=null,r=A.bp(B.c.ao(127.5),B.l.H()>>>16&255,B.l.H()>>>8&255,B.l.H()&255),q=A.a68(12),p=new A.bW(B.xv,1,B.N,-1)
 return A.a9D(A.mF(A.a7i(A.d([A.Dd(a+": ",B.ur),A.Dd(b,s)],t.k),B.b9,B.bj,B.oL),s,B.bq,!0,B.I_,s,s,B.al),new A.fm(r,s,new A.cN(p,p,p,p),q,s,s,B.b3),s,s,B.yk,s)}}
@@ -56361,20 +56361,19 @@ A.a2D.prototype={
 $0(){this.a.d=this.b},
 $S:0}
 A.IW.prototype={
-aW(a,b){var s,r,q,p,o,n,m,l,k,j,i,h,g,f=this.b.length
-if(f===0)return
-s=new A.a3C(this)
-r=a.a.a
+aW(a,b){var s,r,q,p,o,n,m,l,k,j,i,h,g,f=this,e=f.b.length
+if(e===0)return
+s=new A.a3C(f)
+if(f.c){r=a.a.a
 r.translate(b.a,0)
-r.scale(-1,1)
-$.au()
+r.scale(-1,1)}$.au()
 q=A.bC()
 q.c=3
 q.b=B.aZ
 q.d=B.Gp
 q.r=B.Cu.gu(0)
-p=new A.a3B(this,b)
-for(o=0;o<12;++o){n=B.A6[o]
+p=new A.a3B(f,b)
+for(r=a.a.a,o=0;o<12;++o){n=B.A6[o]
 m=n[0]
 l=n[1]
 if(s.$1(m)&&s.$1(l)){k=p.$1(m)
@@ -56384,7 +56383,7 @@ r.drawLine.apply(r,[k.a,k.b,j.a,j.b,i])
 i.delete()}}$.au()
 h=A.bC()
 h.r=B.i.gu(0)
-for(g=0;g<f;++g)if(s.$1(g)){k=p.$1(g)
+for(g=0;g<e;++g)if(s.$1(g)){k=p.$1(g)
 i=h.dh()
 r.drawCircle(k.a,k.b,3,i)
 i.delete()}},
